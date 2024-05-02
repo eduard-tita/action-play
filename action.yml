@@ -1,23 +1,23 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'action-play'
+description: 'Test typescript base action'
+author: 'Eduard Tita'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: 'heart'
-  color: 'red'
+  icon: 'hexagon'
+  color: 'blue'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  name:
+    description: 'Your input name here'
     required: true
-    default: '1000'
+    default: 'Gaga'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  greeting:
+    description: 'Your greeting message'
 
 runs:
   using: node20
