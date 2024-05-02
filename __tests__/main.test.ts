@@ -49,10 +49,7 @@ describe('action', () => {
 
     // Verify that all of the core library functions were called correctly
     expect(debugMock).toHaveBeenNthCalledWith(1, "Got name: 'John'")
-    expect(setOutputMock).toHaveBeenNthCalledWith(
-      1,
-      'greeting', 'Hello, John!'
-    )
+    expect(setOutputMock).toHaveBeenNthCalledWith(1, 'greeting', 'Hello, John!')
     expect(errorMock).not.toHaveBeenCalled()
   })
 })
