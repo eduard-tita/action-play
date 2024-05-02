@@ -42,3 +42,5 @@ runs:
       id: inner-action
       run: node ${{ github.action_path }}/dist/index.js
       shell: bash
+      with:
+        name: ${{ inputs.name }}
