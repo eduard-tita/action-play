@@ -15,6 +15,10 @@ inputs:
     default: 'Gaga'
 
 # Define your outputs here.
+outputs:
+  greeting:
+    description: 'Your greeting message'
+    value: ${{ steps.inner-action.outputs.greeting }}
 
 #runs:
 #  using: node20
@@ -29,7 +33,12 @@ runs:
         distribution: 'temurin'
         java-version: '8'
 
-    - name: Print env
-      id: print-env
+    - name: Print java version
+      id: print-java-version
       run: java -version
+      shell: bash
+
+    - name: 'Run script'
+      id: inner-action
+      run: node ${{ github.action_path }}/dist/index.js
       shell: bash
